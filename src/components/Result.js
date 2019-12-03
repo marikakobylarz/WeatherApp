@@ -11,10 +11,37 @@ const Result = props => {
         const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString()
         const sunsetTime = new Date(sunset * 1000).toLocaleTimeString()
 
+        let dayName;
+        switch (day) {
+            case 0:
+                dayName = "niedziela";
+                break;
+            case 1:
+                dayName = "poniedziałek";
+                break;
+            case 2:
+                dayName = "wtorek";
+                break;
+            case 3:
+                dayName = "środa";
+                break;
+            case 4:
+                dayName = "czawartek";
+                break;
+            case 5:
+                dayName = "piątek";
+                break;
+            case 6:
+                dayName = "sobota";
+                break;
+            default:
+                dayName = "";
+        }
+
         content = (
 
             <>
-                <h2 className="date">{date}, {day}</h2>
+                <h2 className="date">{date}, {dayName}</h2>
 
                 <div className="temp">
                     <div className="temp__minmax" style={{ color: "cadetblue" }}>{minTemp}<sup>&#8451;</sup></div>
