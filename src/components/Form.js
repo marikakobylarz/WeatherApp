@@ -1,4 +1,6 @@
 import React from 'react';
+import glass from '../images/glass.png'
+
 
 const Form = (props) => {
     return (
@@ -8,7 +10,7 @@ const Form = (props) => {
                 value={props.value}
                 placeholder="Wpisz miasto"
                 onChange={props.change}></input>
-            <button className="form__button" onSubmit={props.submit}>Szukaj</button>
+            <button className="form__button" onSubmit={props.submit} style={{ backgroundImage: `url(${glass})` }}></button>
         </form>
     );
 }

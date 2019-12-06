@@ -22,9 +22,9 @@ class App extends Component {
     pressure: "",
     wind: "",
     err: "",
-    description: "",
-  }
+    icon: "",
 
+  }
 
   handleImputChange = e => {
     this.setState({
@@ -46,7 +46,7 @@ class App extends Component {
       })
       .then(response => response.json())
       .then(data => {
-        const date = new Date().toLocaleDateString();
+        const date = new Date().toLocaleDateString(undefined, { month: "long", day: "numeric" });
         const day = new Date().getDay();
 
         this.setState(prevState => ({
@@ -61,11 +61,11 @@ class App extends Component {
           sunset: data.sys.sunset,
           pressure: data.main.pressure,
           wind: data.wind.speed,
-          description: data.weather[0].main,
+          icon: data.weather[0].icon,
           err: false,
           value: "",
-        })
-        )
+
+        }))
       })
       .catch(err => {
         this.setState(prevState => ({
@@ -75,10 +75,9 @@ class App extends Component {
       })
   }
 
-
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <Form
           value={this.state.value}
           change={this.handleImputChange}
