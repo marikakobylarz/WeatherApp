@@ -11,8 +11,8 @@
     color: white;
     margin: 0 auto;
     justify-content: center;
-    min-width: 400px;
-    min-height:100vh;
+    width: 100vw;
+  height: 700px;
     background-image: linear-gradient(#90F7EC,#4c2d80);
 }
 
@@ -124,4 +124,10 @@ h2 {
     font-size: 20px;
     font-weight: normal;
     line-height: 2.2em;
+}
+
+@media only screen and (min-width: 500px) {
+.App{
+    width: 500px;
+   }
 }
