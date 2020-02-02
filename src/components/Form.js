@@ -5,10 +5,11 @@ import glass from '../images/glass.png'
 const Form = (props) => {
     return (
         <form className="form" onSubmit={props.submit}>
-            <input tyle="text"
+            <input type="text"
                 className="form__input"
                 value={props.value}
                 placeholder="Wpisz miasto"
+                maxLength="58"
                 onChange={props.change}></input>
             <button className="form__button" onSubmit={props.submit} style={{ backgroundImage: `url(${glass})` }}></button>
         </form>
