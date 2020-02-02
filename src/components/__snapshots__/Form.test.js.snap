@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form/> renders correctly 1`] = `
+<form
+  className="form"
+>
+  <input
+    className="form__input"
+    placeholder="Wpisz miasto"
+    type="text"
+    value="london"
+  />
+  <button
+    className="form__button"
+    style={
+      Object {
+        "backgroundImage": "url(glass.png)",
+      }
+    }
+  />
+</form>
+`;

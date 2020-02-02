@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap&subset=latin-ext');
 
 
-*{  box-sizing: border-box;
-    margin:0;
-    padding:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .App {
@@ -12,12 +13,13 @@
     margin: 0 auto;
     justify-content: center;
     width: 100vw;
-  height: 700px;
-    background-image: linear-gradient(#90F7EC,#4c2d80);
+    height: 700px;
+    background-image: linear-gradient(rgb(0, 133, 167), #e75d1d);
 }
 
 .form {
     position: relative;
+    padding: 0 15%;
 }
 
 .form__input {
@@ -31,6 +33,11 @@
     background-color: transparent;
 }
 
+::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
 .form__input:focus {
     outline: none;
 }
@@ -40,9 +47,9 @@
     position: absolute;
     right: 30px;
     top: 20px;
-    background-color:transparent;
-    border:none;
-    width:20px;
+    background-color: transparent;
+    border: none;
+    width: 20px;
     height: 20px;
     background-size: 100%;
 }
@@ -56,30 +63,30 @@
     flex-direction: column;
     text-align: center;
     margin-top: 20px;
- }
+}
 
-.icon{
+.icon {
     width: 100px;
     height: 100px;
     background-size: 100%;
-    margin:20px auto;
-  
+    margin: 20px auto;
+
     background-size: 100%;
-    color:white;
+    color: white;
 }
 
 .temp {
     display: flex;
     flex-direction: row;
     margin: 5px auto;
- }
+}
 
 
 .temp__temp {
     width: 90px;
     height: 90px;
     font-size: 80px;
-    margin:0 10px;
+    margin: 0 10px;
 }
 
 .temp__temp span {
@@ -97,7 +104,7 @@
     font-size: 35px;
 }
 
-.temp__minmax span{
+.temp__minmax span {
     vertical-align: super;
     font-size: 20px;
 }
@@ -127,7 +134,7 @@ h2 {
 }
 
 @media only screen and (min-width: 500px) {
-.App{
-    width: 500px;
-   }
+    .App {
+        width: 500px;
+    }
 }
