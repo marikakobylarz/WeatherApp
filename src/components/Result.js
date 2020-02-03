@@ -35,32 +35,16 @@ const Result = props => {
     const sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
     const cityName = city.toLowerCase();
 
-    let dayName;
-    switch (day) {
-      case 0:
-        dayName = "niedziela";
-        break;
-      case 1:
-        dayName = "poniedziałek";
-        break;
-      case 2:
-        dayName = "wtorek";
-        break;
-      case 3:
-        dayName = "środa";
-        break;
-      case 4:
-        dayName = "czawartek";
-        break;
-      case 5:
-        dayName = "piątek";
-        break;
-      case 6:
-        dayName = "sobota";
-        break;
-      default:
-        dayName = "";
-    }
+    const dayName = {
+      0: "niedziela",
+      1: "poniedziałek",
+      2: "wtorek",
+      3: "sroda",
+      4: "czwartek",
+      5: "piątek",
+      6: "sobota"
+    };
+
     let background;
     switch (icon) {
       case "01d":
@@ -125,7 +109,7 @@ const Result = props => {
       <>
         <h2 className="date">
           {" "}
-          {dayName}, {date}{" "}
+          {dayName[day]}, {date}{" "}
         </h2>
         <div
           className="icon"

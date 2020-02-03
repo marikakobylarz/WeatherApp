@@ -1,6 +1,6 @@
 # See https://help.github.cogit m/articles/ignoring-files/ for more about ignoring files.
 
-#api key
+# api key
 .env
   
 # dependencies
